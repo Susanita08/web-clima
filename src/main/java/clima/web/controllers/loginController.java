@@ -47,9 +47,9 @@ public class loginController extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String user = (String)req.getAttribute("exampleInputEmail1");
-		String password= (String)req.getAttribute("exampleInputPassword1");
-		Integer pais = (Integer)req.getAttribute("exampleFormControlSelect1");
+		String user = (String)req.getParameter("exampleInputEmail1");
+		String password= (String)req.getParameter("exampleInputPassword1");
+		Integer pais = Integer.valueOf(req.getParameter("exampleFormControlSelect1"));
 		
 		super.doPost(req, resp);
 	}
